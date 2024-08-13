@@ -3,6 +3,7 @@ $color-text: hsl(0, 0%, 20%);
 $color-subtext: hsl(0, 0%, 30%);
 $color-border: hsl(0, 0%, 85%);
 $color-box-background: mix($color-primary, white, 4%);
+$color-background: white;
 $border-radius: 4px;
 $font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
   sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
@@ -17,6 +18,7 @@ body {
   color: $color-text;
   font-size: 1rem;
   max-width: 63em;
+  background-color: $color-background;
 
   @media (min-width: 820px) {
     font-size: 1.2rem;
@@ -105,10 +107,21 @@ a {
 }
 
 nav {
-  margin: 1em 0 3em;
+  margin: 1em 0 2em;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  @media (max-width: 700px) {
+    justify-content: center;
+    margin: 0.5em;    
+  }
 }
 
-#notes-entry-container {
+
+
+
+  #notes-entry-container {
   display: grid;
   grid-gap: 2em;
   grid-template-areas:
@@ -143,4 +156,13 @@ code {
 .invalid-link-brackets {
   color: #ccc;
   cursor: help;
+}
+
+.profile-picrew {
+  width: 80px;
+}
+@media (max-width: 700px) {
+  .profile-picrew {
+    width: 60px;
+  }
 }
